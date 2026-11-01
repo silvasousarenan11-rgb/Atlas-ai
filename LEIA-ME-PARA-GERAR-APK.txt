@@ -1,0 +1,16 @@
+ATLAS AI — COMO GERAR O APK AUTOMATICAMENTE
+
+Este pacote é CÓDIGO-FONTE com um fluxo de compilação automática do GitHub Actions. Ele ainda não é um APK pronto.
+
+O que o fluxo faz:
+- Compila o projeto Android quando os arquivos são enviados à branch main/master.
+- Também permite iniciar a compilação manualmente em GitHub > Actions > Compilar APK do ATLAS AI > Run workflow.
+- Quando terminar com sucesso, abre a execução e baixa o artefato ATLAS-AI-APK. Dentro dele estará app-debug.apk.
+
+IMPORTANTE:
+1. Envie o CONTEÚDO desta pasta para a raiz do repositório GitHub atlas-ai. Não envie somente este ZIP, pois o GitHub não extrai ZIP automaticamente.
+2. As pastas .github e netlify precisam ser preservadas; no celular, talvez seja mais fácil enviar usando um computador.
+3. A função Gemini ainda precisa ser publicada no Netlify e a URL API_ENDPOINT em app/src/main/java/com/atlasai/app/MainActivity.kt deve ser trocada pela URL real.
+4. Configure GEMINI_API_KEY nas variáveis de ambiente do Netlify. Nunca salve a chave no código, no ZIP ou no GitHub.
+5. APK de debug é para teste/instalação manual, não é uma versão assinada para publicar na Play Store.
+6. A compilação ainda precisa ser executada para confirmar que o projeto compila corretamente.
